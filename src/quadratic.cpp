@@ -1,6 +1,6 @@
 #include <cmath>
 #include <cassert>
-#include <stdio.h>
+#include <cstdio>
 
 #define INF_ROOTS 3 
 #define EPSILON 1e-6
