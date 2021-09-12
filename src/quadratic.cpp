@@ -50,9 +50,9 @@ bool isEqualDouble(double lhs, double rhs) {
 NRoots solveQuadratic(double a, double b, double c,
                       double *x1, double *x2) {
 
-    assert(std::isfinite(a));
-    assert(std::isfinite(b));
-    assert(std::isfinite(c));
+    assert(isfinite(a));
+    assert(isfinite(b));
+    assert(isfinite(c));
     assert(x1 != nullptr);
     assert(x2 != nullptr);
     assert(x1 != x2);
