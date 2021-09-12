@@ -1,5 +1,5 @@
 CC		= g++ 
-CFLAGS = -std=c++17 -Wall -Wextra -Weffc++ -Wc++0x-compat -Wc++11-compat -Wc++14-compat 
+CFLAGS = -std=c++17 -Wall -Wextra -Weffc++ -Wc++0x-compat -Wc++11-compat -Wc++14-compat
 CFLAGS += -Waggressive-loop-optimizations -Walloc-zero -Walloca -Walloca-larger-than=8192 -Warray-bounds 
 CFLAGS += -Wcast-align -Wcast-qual -Wchar-subscripts -Wconditionally-supported -Wconversion -Wctor-dtor-privacy 
 CFLAGS += -Wdangling-else -Wduplicated-branches -Wempty-body -Wfloat-equal -Wformat-nonliteral -Wformat-security 
@@ -14,7 +14,7 @@ CFLAGS += -Walloc-size-larger-than=1073741824 -Walloc-zero -Walloca -Walloca-lar
 CFLAGS += -Wdangling-else -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=2 -Wmissing-attributes 
 CFLAGS += -Wmultistatement-macros -Wrestrict -Wshadow=global -Wsuggest-attribute=malloc -fcheck-new 
 CFLAGS += -fsized-deallocation -fstrict-overflow 
-CFLAGS += -flto-odr-type-merging -fno-omit-frame-pointer
+CFLAGS += -flto-odr-type-merging -fno-omit-frame-pointer -I include
 BIN		= quadratic 
 RM		= rm -rf
 HDR		= include 

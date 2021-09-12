@@ -1,79 +1,91 @@
-#include <cmath>
-#include <cassert>
-#include <cstdio>
+#include <math.h>
+#include <assert.h>
+#include <stdio.h> 
+#include "../include/quadratic.h"
 
-#define INF_ROOTS 3 
-#define EPSILON 1e-6
-
-//------------------------------------------------------------ 
-//! Solves the quadratic equation ax^2 + bx + c = 0
-//!
-//! @param[in]  a   a-coefficient
-//! @param[in]  b   b-coefficient
-//! @param[in]  c   c-coefficient
-//! @param[in]  x1  Pointer to the 1st root
-//! @param[in]  x2  Pointer to the 2nd root
-//!
-//! @return Number of roots
-//!
-//! @note In the case of infinite roots returns INF_ROOTS
-//------------------------------------------------------------ 
-
-size_t solveQuadratic(double a, double b, double c, double *x1, double *x2); 
-
-size_t solveQuadratic(double a, double b, double c,
-                      double *x1, double *x2) {
-
-    assert(x1 != NULL);
-    assert(x2 != NULL);
-    assert(x1 != x2);
-
-    if (a < EPSILON) {
-        if (b < EPSILON) {
-            return (c < EPSILON) ? INF_ROOTS : 0;
-        } else { 
-            *x1 = -c / b;
-            return 1; 
-        }
-    } else {
-        const double d = b * b - 4 * a * c;
-        if (d < 0) {
-            return 0;
-        }
-        const double sqrtD = sqrt(d);
-        *x1 = (-b + sqrtD) / (2 * a);
-        *x2 = (-b - sqrtD) / (2 * a);
-        return 2;
+int getCoefsFromInput(double *a, double *b, double *c) {
+    if (scanf("%lg %lg %lg", a, b, c) == EOF) {
+        return 0;
     }
-} 
+    return (isfinite(*a) && isfinite(*b) && isfinite(*c)) ? 1 : 0;
+}
 
-int main(void) {
-    printf("This program solves a quadratic equation with given coefficients\n");
-    printf("Please enter a, b and c coefficients:\n");
-
-    double a, b, c;
-    scanf("%lg %lg %lg", &a, &b, &c);
-    assert(std::isfinite(a));
-    assert(std::isfinite(b));
-    assert(std::isfinite(c));
-
-    double x1, x2;
-    const size_t nRoots = solveQuadratic(a, b, c, &x1, &x2);
-
+void printResult(NRoots nRoots, double x1, double x2) {
     switch (nRoots) {
-        case 0:
+        case ZERO:
             printf("Given equation has no real solutions\n");
             break;
-        case 1:
+        case ONE:
             printf("The only equation solution is %lg\n", x1);
             break;
-        case 2:
+        case TWO:
             printf("Equation solutions are %lg and %lg\n", x1, x2);
             break;
         case INF_ROOTS:
             printf("Given equation has infinite solutions\n");
             break;
         default:
-            printf("There was an error in the program\n");
+            printf("Undefined number of roots returned\n");
     }
+}
+
+void printEquation(double a, double b, double c) {
+    printf("Your equation is %lgx^2 ", a);
+    if (b < 0) {
+        printf("- %lgx ", -1 * b);
+    } else { 
+        printf("+ %lgx ", b);
+    }
+    if (c < 0) {
+        printf("- %lg = 0\n", -1 * c);
+    } else { 
+        printf("+ %lg = 0\n", c);
+    }
+}
+
+bool isEqualDouble(double lhs, double rhs) {
+    return abs(lhs - rhs) < EPSILON;
+}
+
+NRoots solveQuadratic(double a, double b, double c,
+                      double *x1, double *x2) {
+
+    assert(std::isfinite(a));
+    assert(std::isfinite(b));
+    assert(std::isfinite(c));
+    assert(x1 != nullptr);
+    assert(x2 != nullptr);
+    assert(x1 != x2);
+    
+    if (isEqualDouble(a, 0)) {
+        if (isEqualDouble(b, 0)) {
+            return (isEqualDouble(c, 0)) ? NRoots::INF_ROOTS : NRoots::ZERO;
+        } else { 
+            *x1 = solveLinear(b, c);
+            return NRoots::ONE;
+        }
+    } else {
+        if (isEqualDouble(c, 0)) {
+            *x1 = 0;
+            *x2 = solveLinear(a, b);
+            return NRoots::TWO;
+        }
+
+        const double discr = b * b - 4 * a * c;
+        if (discr < 0) {
+            return NRoots::ZERO;
+        } else if (isEqualDouble(discr, 0)) {
+            *x1 = -b / (2 * a);
+            return NRoots::ONE;
+        }
+
+        const double sqrtD = sqrt(discr);
+        *x1 = (-b + sqrtD) / (2 * a);
+        *x2 = (-b - sqrtD) / (2 * a);
+        return NRoots::TWO;
+    }
+}
+
+double solveLinear(double a, double b) {
+    return -b / a;
 }
