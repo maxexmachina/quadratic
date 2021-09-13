@@ -3,13 +3,13 @@
 #include "../include/quadratic.h"
 #include "../include/test.h"
 
-//#define NDEBUG_MODE
+#define NDEBUG_MODE
 
 int main() {
+    #ifndef NDEBUG_MODE 
     printf("This program solves a quadratic equation with given coefficients\n"
            "Please enter a, b and c coefficients:\n");
 
-    #ifndef NDEBUG_MODE 
     double a = NAN, b = NAN, c = NAN;
 
     if (!getCoefsFromInput(&a, &b, &c)) {

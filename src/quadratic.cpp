@@ -44,6 +44,7 @@ void printEquation(double a, double b, double c) {
 }
 
 bool isEqualDouble(double lhs, double rhs) {
+    //printf("%lg and %lg : %d\n", lhs, rhs, abs(lhs - rhs) < EPSILON);
     return abs(lhs - rhs) < EPSILON;
 }
 
@@ -66,9 +67,20 @@ NRoots solveQuadratic(double a, double b, double c,
         }
     } else {
         if (isEqualDouble(c, 0)) {
-            *x1 = 0;
-            *x2 = solveLinear(a, b);
-            return NRoots::TWO;
+            const double temp = solveLinear(a, b);
+            if (isEqualDouble(temp, 0)) {
+                *x1 = temp;
+                return NRoots::ONE;
+            } else {
+                if (temp < 0) {
+                    *x1 = temp;
+                    *x2 = 0;
+                } else {
+                    *x1 = 0;
+                    *x2 = temp;
+                }
+                return NRoots::TWO;
+            }
         }
 
         const double discr = b * b - 4 * a * c;
@@ -80,8 +92,8 @@ NRoots solveQuadratic(double a, double b, double c,
         }
 
         const double sqrtD = sqrt(discr);
-        *x1 = (-b + sqrtD) / (2 * a);
-        *x2 = (-b - sqrtD) / (2 * a);
+        *x1 = (-b - sqrtD) / (2 * a);
+        *x2 = (-b + sqrtD) / (2 * a);
         return NRoots::TWO;
     }
 }

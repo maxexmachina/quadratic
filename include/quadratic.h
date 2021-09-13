@@ -2,7 +2,7 @@
 #define QUADRATIC_H
 
 //! Determines the precision of comparison in isEqualDouble function
-const double EPSILON = 1e-6;
+const double EPSILON = 1e-2;
 
 //! Enum type with different possible
 //! return values of the solveQuadratic function

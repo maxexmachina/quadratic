@@ -46,12 +46,12 @@ void runTests(const char* path) {
     printf("Running tests from %s\n", path);
     FILE *testFile = fopen(path, "r");
     while (fscanf(testFile, "%zu %lg %lg %lg %zu %lg %lg\n", &test.id, &test.a,
-           &test.b, &test.c, &test.nRoots, &test.x1, &test.x2)) {
+           &test.b, &test.c, &test.nRoots, &test.x1, &test.x2) != EOF) {
         ++nTests;
         if (!checkTestCase(test)) {
             ++nFailed;
         }
     }
-    printf("Tests completed, %zu failed from %zu total\n", nFailed, nTests); 
+    printf("%zu tests completed, %zu passed, %zu failed\n", nTests, nTests - nFailed, nFailed); 
     fclose(testFile);
 }
