@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdio.h>
+
 #include "../include/quadratic.h"
 #include "../include/test.h"
 

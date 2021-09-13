@@ -1,6 +1,7 @@
 #include <math.h>
 #include <assert.h>
 #include <stdio.h> 
+
 #include "../include/quadratic.h"
 
 int getCoefsFromInput(double *a, double *b, double *c) {
@@ -44,7 +45,6 @@ void printEquation(double a, double b, double c) {
 }
 
 bool isEqualDouble(double lhs, double rhs) {
-    //printf("%lg and %lg : %d\n", lhs, rhs, abs(lhs - rhs) < EPSILON);
     return abs(lhs - rhs) < EPSILON;
 }
 
