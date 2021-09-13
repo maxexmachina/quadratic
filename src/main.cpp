@@ -1,6 +1,7 @@
 #include <stdio.h> 
 #include <math.h>
 #include "../include/quadratic.h"
+#include "../include/test.h"
 
 //#define NDEBUG_MODE
 
@@ -23,6 +24,7 @@ int main() {
     printResult(nRoots, x1, x2);
     #else 
 
+    runTests("tests.txt");
     #endif 
 }
 
