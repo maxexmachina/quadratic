@@ -1,0 +1,193 @@
+\hypertarget{quadratic_8h}{}\doxysection{include/quadratic.h File Reference}
+\label{quadratic_8h}\index{include/quadratic.h@{include/quadratic.h}}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219}{NRoots}} \{ \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219ae117e3533122c80b262257b49b21cddf}{ZERO}}
+, \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219a7a725f13af144bdef532d0389ba75e0d}{ONE}}
+, \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219a0e793500a63ffa575b9b712ca3bc9851}{TWO}}
+, \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219a5a79e9e49077da58fe5d46a98f0b5e36}{INF\+\_\+\+ROOTS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219}{NRoots}} \mbox{\hyperlink{quadratic_8h_a6f48364bf0308d196411043b67134325}{solve\+Quadratic}} (double a, double b, double c, double $\ast$x1, double $\ast$x2)
+\item 
+double \mbox{\hyperlink{quadratic_8h_acbc57f3fa2e7f481edaeab4592daf3de}{solve\+Linear}} (double a, double b)
+\item 
+bool \mbox{\hyperlink{quadratic_8h_aa1343a0cfcb5d32bab9f662f9f47fbbc}{is\+Equal\+Double}} (double lhs, double rhs)
+\item 
+int \mbox{\hyperlink{quadratic_8h_a0e2fe8b883fe5b0bfd30dc3bc7b21794}{get\+Coefs\+From\+Input}} (double $\ast$a, double $\ast$b, double $\ast$c)
+\item 
+void \mbox{\hyperlink{quadratic_8h_a615703ee7eed1f26284b9cbf143555d9}{print\+Result}} (\mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219}{NRoots}} n\+Roots, double x1, double x2)
+\item 
+void \mbox{\hyperlink{quadratic_8h_ade38f4e720105f0c682da4bc82a9a8a0}{print\+Equation}} (double a, double b, double c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{quadratic_8h_a596344e5a2992d2beec43b76a6294de0}{EPSILON}} = 1e-\/2
+\begin{DoxyCompactList}\small\item\em Determines the precision of comparison in is\+Equal\+Double function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{quadratic_8h_ac520fd6b64ded7d695092d77d7619219}\label{quadratic_8h_ac520fd6b64ded7d695092d77d7619219}} 
+\index{quadratic.h@{quadratic.h}!NRoots@{NRoots}}
+\index{NRoots@{NRoots}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{NRoots}{NRoots}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219}{NRoots}}}
+
+Enum type with different possible return values of the solve\+Quadratic function \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZERO@{ZERO}!quadratic.h@{quadratic.h}}\index{quadratic.h@{quadratic.h}!ZERO@{ZERO}}}\mbox{\Hypertarget{quadratic_8h_ac520fd6b64ded7d695092d77d7619219ae117e3533122c80b262257b49b21cddf}\label{quadratic_8h_ac520fd6b64ded7d695092d77d7619219ae117e3533122c80b262257b49b21cddf}} 
+ZERO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONE@{ONE}!quadratic.h@{quadratic.h}}\index{quadratic.h@{quadratic.h}!ONE@{ONE}}}\mbox{\Hypertarget{quadratic_8h_ac520fd6b64ded7d695092d77d7619219a7a725f13af144bdef532d0389ba75e0d}\label{quadratic_8h_ac520fd6b64ded7d695092d77d7619219a7a725f13af144bdef532d0389ba75e0d}} 
+ONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO@{TWO}!quadratic.h@{quadratic.h}}\index{quadratic.h@{quadratic.h}!TWO@{TWO}}}\mbox{\Hypertarget{quadratic_8h_ac520fd6b64ded7d695092d77d7619219a0e793500a63ffa575b9b712ca3bc9851}\label{quadratic_8h_ac520fd6b64ded7d695092d77d7619219a0e793500a63ffa575b9b712ca3bc9851}} 
+TWO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INF\_ROOTS@{INF\_ROOTS}!quadratic.h@{quadratic.h}}\index{quadratic.h@{quadratic.h}!INF\_ROOTS@{INF\_ROOTS}}}\mbox{\Hypertarget{quadratic_8h_ac520fd6b64ded7d695092d77d7619219a5a79e9e49077da58fe5d46a98f0b5e36}\label{quadratic_8h_ac520fd6b64ded7d695092d77d7619219a5a79e9e49077da58fe5d46a98f0b5e36}} 
+INF\+\_\+\+ROOTS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{quadratic_8h_a0e2fe8b883fe5b0bfd30dc3bc7b21794}\label{quadratic_8h_a0e2fe8b883fe5b0bfd30dc3bc7b21794}} 
+\index{quadratic.h@{quadratic.h}!getCoefsFromInput@{getCoefsFromInput}}
+\index{getCoefsFromInput@{getCoefsFromInput}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{getCoefsFromInput()}{getCoefsFromInput()}}
+{\footnotesize\ttfamily int get\+Coefs\+From\+Input (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+Gets equation coefficients from the standard input
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em a} & Pointer to a-\/coefficient \\
+\hline
+\mbox{\texttt{ out}}  & {\em b} & Pointer to b-\/coefficient \\
+\hline
+\mbox{\texttt{ out}}  & {\em c} & Pointer to c-\/coefficient\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if operation was successful, 0 otherwise ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{quadratic_8h_aa1343a0cfcb5d32bab9f662f9f47fbbc}\label{quadratic_8h_aa1343a0cfcb5d32bab9f662f9f47fbbc}} 
+\index{quadratic.h@{quadratic.h}!isEqualDouble@{isEqualDouble}}
+\index{isEqualDouble@{isEqualDouble}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{isEqualDouble()}{isEqualDouble()}}
+{\footnotesize\ttfamily bool is\+Equal\+Double (\begin{DoxyParamCaption}\item[{double}]{lhs,  }\item[{double}]{rhs }\end{DoxyParamCaption})}
+
+Determines if two double precision floats are equal
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em lhs} & First number \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & Second number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if numbers are equal, false otherwise
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Comparison is performed with the accuracy of EPSILON 
+\end{DoxyNote}
+\mbox{\Hypertarget{quadratic_8h_ade38f4e720105f0c682da4bc82a9a8a0}\label{quadratic_8h_ade38f4e720105f0c682da4bc82a9a8a0}} 
+\index{quadratic.h@{quadratic.h}!printEquation@{printEquation}}
+\index{printEquation@{printEquation}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{printEquation()}{printEquation()}}
+{\footnotesize\ttfamily void print\+Equation (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c }\end{DoxyParamCaption})}
+
+Prints quadratic equation ax$^\wedge$2 + bx + c = 0 with given coefficients
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & a-\/coefficient \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & b-\/coefficient \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & c-\/coefficient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{quadratic_8h_a615703ee7eed1f26284b9cbf143555d9}\label{quadratic_8h_a615703ee7eed1f26284b9cbf143555d9}} 
+\index{quadratic.h@{quadratic.h}!printResult@{printResult}}
+\index{printResult@{printResult}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{printResult()}{printResult()}}
+{\footnotesize\ttfamily void print\+Result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219}{NRoots}}}]{n\+Roots,  }\item[{double}]{x1,  }\item[{double}]{x2 }\end{DoxyParamCaption})}
+
+Prints program result to the standard output 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n\+Roots} & Number of roots in the solution \\
+\hline
+\mbox{\texttt{ in}}  & {\em x1} & First root \\
+\hline
+\mbox{\texttt{ in}}  & {\em x2} & Second root \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{quadratic_8h_acbc57f3fa2e7f481edaeab4592daf3de}\label{quadratic_8h_acbc57f3fa2e7f481edaeab4592daf3de}} 
+\index{quadratic.h@{quadratic.h}!solveLinear@{solveLinear}}
+\index{solveLinear@{solveLinear}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{solveLinear()}{solveLinear()}}
+{\footnotesize\ttfamily double solve\+Linear (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b }\end{DoxyParamCaption})}
+
+Solves linear equation ax + b = 0
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & a-\/coefficient \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & b-\/coefficient\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of x 
+\end{DoxyReturn}
+\mbox{\Hypertarget{quadratic_8h_a6f48364bf0308d196411043b67134325}\label{quadratic_8h_a6f48364bf0308d196411043b67134325}} 
+\index{quadratic.h@{quadratic.h}!solveQuadratic@{solveQuadratic}}
+\index{solveQuadratic@{solveQuadratic}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{solveQuadratic()}{solveQuadratic()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219}{NRoots}} solve\+Quadratic (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+Solves the quadratic equation ax$^\wedge$2 + bx + c = 0
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & a-\/coefficient \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & b-\/coefficient \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & c-\/coefficient \\
+\hline
+\mbox{\texttt{ out}}  & {\em x1} & Pointer to the 1st root \\
+\hline
+\mbox{\texttt{ out}}  & {\em x2} & Pointer to the 2nd root\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of roots
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+In the case of infinite roots returns INF\+\_\+\+ROOTS 
+\end{DoxyNote}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{quadratic_8h_a596344e5a2992d2beec43b76a6294de0}\label{quadratic_8h_a596344e5a2992d2beec43b76a6294de0}} 
+\index{quadratic.h@{quadratic.h}!EPSILON@{EPSILON}}
+\index{EPSILON@{EPSILON}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{EPSILON}{EPSILON}}
+{\footnotesize\ttfamily const double EPSILON = 1e-\/2}
+
+
+
+Determines the precision of comparison in is\+Equal\+Double function. 
+

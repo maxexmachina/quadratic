@@ -1,0 +1,66 @@
+\hypertarget{test_8h}{}\doxysection{include/test.h File Reference}
+\label{test_8h}\index{include/test.h@{include/test.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtestCase}{test\+Case}}
+\begin{DoxyCompactList}\small\item\em Encapsulates the set of values needed for testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structtestCase}{test\+Case}} \mbox{\hyperlink{test_8h_a053e2aa4da1d9ec9a8ce88c0a05dce2a}{t\+Case}}
+\begin{DoxyCompactList}\small\item\em Encapsulates the set of values needed for testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test_8h_a7a3e3cc580d8e0fda3208c57768da90e}{check\+Test\+Case}} (\mbox{\hyperlink{test_8h_a053e2aa4da1d9ec9a8ce88c0a05dce2a}{t\+Case}} test)
+\item 
+void \mbox{\hyperlink{test_8h_a1f281666403299f19f388ca4d43970ed}{run\+Tests}} (const char $\ast$path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{test_8h_a053e2aa4da1d9ec9a8ce88c0a05dce2a}\label{test_8h_a053e2aa4da1d9ec9a8ce88c0a05dce2a}} 
+\index{test.h@{test.h}!tCase@{tCase}}
+\index{tCase@{tCase}!test.h@{test.h}}
+\doxysubsubsection{\texorpdfstring{tCase}{tCase}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structtestCase}{test\+Case}} \mbox{\hyperlink{test_8h_a053e2aa4da1d9ec9a8ce88c0a05dce2a}{t\+Case}}}
+
+
+
+Encapsulates the set of values needed for testing. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test_8h_a7a3e3cc580d8e0fda3208c57768da90e}\label{test_8h_a7a3e3cc580d8e0fda3208c57768da90e}} 
+\index{test.h@{test.h}!checkTestCase@{checkTestCase}}
+\index{checkTestCase@{checkTestCase}!test.h@{test.h}}
+\doxysubsubsection{\texorpdfstring{checkTestCase()}{checkTestCase()}}
+{\footnotesize\ttfamily int check\+Test\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{test_8h_a053e2aa4da1d9ec9a8ce88c0a05dce2a}{t\+Case}}}]{test }\end{DoxyParamCaption})}
+
+Checks result of solve\+Quadratic function against test values
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em test} & Struct, encapsulating test info, equation coefficients and expected values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if test is successful, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8h_a1f281666403299f19f388ca4d43970ed}\label{test_8h_a1f281666403299f19f388ca4d43970ed}} 
+\index{test.h@{test.h}!runTests@{runTests}}
+\index{runTests@{runTests}!test.h@{test.h}}
+\doxysubsubsection{\texorpdfstring{runTests()}{runTests()}}
+{\footnotesize\ttfamily void run\+Tests (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+Parses test cases from a file and runs them with check\+Test\+Case
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em path} & Path to file, containing test cases ~\newline
+ \\
+\hline
+\end{DoxyParams}

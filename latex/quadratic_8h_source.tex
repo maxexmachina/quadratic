@@ -1,0 +1,43 @@
+\hypertarget{quadratic_8h_source}{}\doxysection{quadratic.\+h}
+\label{quadratic_8h_source}\index{include/quadratic.h@{include/quadratic.h}}
+\mbox{\hyperlink{quadratic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef QUADRATIC\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define QUADRATIC\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{5 \textcolor{keyword}{const} \textcolor{keywordtype}{double} \mbox{\hyperlink{quadratic_8h_a596344e5a2992d2beec43b76a6294de0}{EPSILON}} = 1e-\/2;}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{9 \textcolor{keyword}{enum} \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219}{NRoots}} \{}
+\DoxyCodeLine{10     \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219ae117e3533122c80b262257b49b21cddf}{ZERO}},}
+\DoxyCodeLine{11     \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219a7a725f13af144bdef532d0389ba75e0d}{ONE}},}
+\DoxyCodeLine{12     \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219a0e793500a63ffa575b9b712ca3bc9851}{TWO}},}
+\DoxyCodeLine{13     \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219a5a79e9e49077da58fe5d46a98f0b5e36}{INF\_ROOTS}}}
+\DoxyCodeLine{14 \};}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{28 \textcolor{comment}{}\textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{29 \mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219}{NRoots}} \mbox{\hyperlink{quadratic_8h_a6f48364bf0308d196411043b67134325}{solveQuadratic}}(\textcolor{keywordtype}{double} a, \textcolor{keywordtype}{double} b, \textcolor{keywordtype}{double} c, \textcolor{keywordtype}{double} *x1, \textcolor{keywordtype}{double} *x2); }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{38 \textcolor{comment}{}\textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{39 \textcolor{keywordtype}{double} \mbox{\hyperlink{quadratic_8h_acbc57f3fa2e7f481edaeab4592daf3de}{solveLinear}}(\textcolor{keywordtype}{double} a, \textcolor{keywordtype}{double} b);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{50 \textcolor{comment}{}\textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{51 \textcolor{keywordtype}{bool} \mbox{\hyperlink{quadratic_8h_aa1343a0cfcb5d32bab9f662f9f47fbbc}{isEqualDouble}}(\textcolor{keywordtype}{double} lhs, \textcolor{keywordtype}{double} rhs);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{61 \textcolor{comment}{}\textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{62 \textcolor{keywordtype}{int} \mbox{\hyperlink{quadratic_8h_a0e2fe8b883fe5b0bfd30dc3bc7b21794}{getCoefsFromInput}}(\textcolor{keywordtype}{double} *a, \textcolor{keywordtype}{double} *b, \textcolor{keywordtype}{double} *c);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{69 \textcolor{comment}{}\textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{70 \textcolor{keywordtype}{void} \mbox{\hyperlink{quadratic_8h_a615703ee7eed1f26284b9cbf143555d9}{printResult}}(\mbox{\hyperlink{quadratic_8h_ac520fd6b64ded7d695092d77d7619219}{NRoots}} nRoots, \textcolor{keywordtype}{double} x1, \textcolor{keywordtype}{double} x2);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{78 \textcolor{comment}{}\textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{79 \textcolor{keywordtype}{void} \mbox{\hyperlink{quadratic_8h_ade38f4e720105f0c682da4bc82a9a8a0}{printEquation}}(\textcolor{keywordtype}{double} a, \textcolor{keywordtype}{double} b, \textcolor{keywordtype}{double} c);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

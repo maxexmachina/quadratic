@@ -1,0 +1,46 @@
+\hypertarget{test_8cpp}{}\doxysection{src/test.cpp File Reference}
+\label{test_8cpp}\index{src/test.cpp@{src/test.cpp}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/quadratic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/test.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test_8cpp_a7a3e3cc580d8e0fda3208c57768da90e}{check\+Test\+Case}} (\mbox{\hyperlink{test_8h_a053e2aa4da1d9ec9a8ce88c0a05dce2a}{t\+Case}} test)
+\item 
+void \mbox{\hyperlink{test_8cpp_a1f281666403299f19f388ca4d43970ed}{run\+Tests}} (const char $\ast$path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test_8cpp_a7a3e3cc580d8e0fda3208c57768da90e}\label{test_8cpp_a7a3e3cc580d8e0fda3208c57768da90e}} 
+\index{test.cpp@{test.cpp}!checkTestCase@{checkTestCase}}
+\index{checkTestCase@{checkTestCase}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{checkTestCase()}{checkTestCase()}}
+{\footnotesize\ttfamily int check\+Test\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{test_8h_a053e2aa4da1d9ec9a8ce88c0a05dce2a}{t\+Case}}}]{test }\end{DoxyParamCaption})}
+
+Checks result of solve\+Quadratic function against test values
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em test} & Struct, encapsulating test info, equation coefficients and expected values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if test is successful, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8cpp_a1f281666403299f19f388ca4d43970ed}\label{test_8cpp_a1f281666403299f19f388ca4d43970ed}} 
+\index{test.cpp@{test.cpp}!runTests@{runTests}}
+\index{runTests@{runTests}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{runTests()}{runTests()}}
+{\footnotesize\ttfamily void run\+Tests (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+Parses test cases from a file and runs them with check\+Test\+Case
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em path} & Path to file, containing test cases ~\newline
+ \\
+\hline
+\end{DoxyParams}
