@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <stdio.h> 
 
-//#include "../include/quadratic.h"
+#include "../include/quadratic.h"
 
 int getCoefsFromInput(double *a, double *b, double *c) {
     if (scanf("%lg %lg %lg", a, b, c) == EOF) {
