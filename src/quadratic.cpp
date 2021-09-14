@@ -2,10 +2,11 @@
 #include <assert.h>
 #include <stdio.h> 
 
-#include "../include/quadratic.h"
+#include "quadratic.h"
 
 int getCoefsFromInput(double *a, double *b, double *c) {
-    if (scanf("%lg %lg %lg", a, b, c) == EOF) {
+    const int ret = scanf("%lg %lg %lg", a, b, c); 
+    if (ret == EOF || ret == 0) {
         return 0;
     }
     return (isfinite(*a) && isfinite(*b) && isfinite(*c)) ? 1 : 0;
@@ -33,12 +34,12 @@ void printResult(NRoots nRoots, double x1, double x2) {
 void printEquation(double a, double b, double c) {
     printf("Your equation is %lgx^2 ", a);
     if (b < 0) {
-        printf("- %lgx ", -1 * b);
+        printf("- %lgx ", -b);
     } else { 
         printf("+ %lgx ", b);
     }
     if (c < 0) {
-        printf("- %lg = 0\n", -1 * c);
+        printf("- %lg = 0\n", -c);
     } else { 
         printf("+ %lg = 0\n", c);
     }
@@ -84,6 +85,7 @@ NRoots solveQuadratic(double a, double b, double c,
         }
 
         const double discr = b * b - 4 * a * c;
+        assert(isfinite(discr));
         if (discr < 0) {
             return NRoots::ZERO;
         } else if (isEqualDouble(discr, 0)) {

@@ -1,10 +1,10 @@
 #include <math.h>
 #include <stdio.h>
 
-#include "../include/quadratic.h"
-#include "../include/test.h"
+#include "quadratic.h"
+#include "test.h"
 
-int checkTestCase(tCase test) {
+int checkTestCase(testCase test) {
     double x1 = NAN, x2 = NAN;
     const NRoots nRoots = solveQuadratic(test.a, test.b, test.c, &x1, &x2);
 
@@ -39,8 +39,8 @@ int checkTestCase(tCase test) {
     }
 }
 
-void runTests(const char* path) {
-    tCase test;
+int runTests(const char* path) {
+    testCase test;
     size_t nTests = 0;
     size_t nFailed = 0;
 
@@ -55,4 +55,5 @@ void runTests(const char* path) {
     }
     printf("%zu tests completed, %zu passed, %zu failed\n", nTests, nTests - nFailed, nFailed); 
     fclose(testFile);
+    return nFailed == 0;
 }
