@@ -7,10 +7,10 @@ const double EPSILON = 1e-2;
 //! Enum type with different possible
 //! return values of the solveQuadratic function
 enum NRoots {
-    ZERO,
-    ONE,
-    TWO,
-    INF_ROOTS
+    ZERO = 0,
+    ONE = 1,
+    TWO = 2,
+    INF_ROOTS = 3
 };
 
 //------------------------------------------------------------ 
