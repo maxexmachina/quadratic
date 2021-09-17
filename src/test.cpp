@@ -46,6 +46,10 @@ int runTests(const char* path) {
 
     printf("Running tests from %s\n", path);
     FILE *testFile = fopen(path, "r");
+    if (testFile == nullptr) {
+        printf("Failed to open test file %s\n", path);
+        return 0;
+    }
     while (fscanf(testFile, "%zu %lg %lg %lg %zu %lg %lg\n", &test.id, &test.a,
            &test.b, &test.c, &test.nRoots, &test.x1, &test.x2) != EOF) {
         ++nTests;
@@ -54,6 +58,9 @@ int runTests(const char* path) {
         }
     }
     printf("%zu tests completed, %zu passed, %zu failed\n", nTests, nTests - nFailed, nFailed); 
-    fclose(testFile);
+    if (fclose(testFile) == EOF) {
+        printf("Failed to close file %s\n", path);
+        return 0;
+    }
     return nFailed == 0;
 }
