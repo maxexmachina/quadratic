@@ -4,7 +4,7 @@
 #include "quadratic.h"
 #include "test.h"
 
-int checkTestCase(testCase test) {
+int checkTestCase(const testCase test) {
     double x1 = NAN, x2 = NAN;
     const NRoots nRoots = solveQuadratic(test.a, test.b, test.c, &x1, &x2);
 

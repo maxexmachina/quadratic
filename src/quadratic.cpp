@@ -12,7 +12,7 @@ int getCoefsFromInput(double *a, double *b, double *c) {
     return (isfinite(*a) && isfinite(*b) && isfinite(*c)) ? 1 : 0;
 }
 
-void printResult(NRoots nRoots, double x1, double x2) {
+void printResult(const NRoots nRoots, const double x1, const double x2) {
     switch (nRoots) {
         case ZERO:
             printf("Given equation has no real solutions\n");
@@ -31,7 +31,7 @@ void printResult(NRoots nRoots, double x1, double x2) {
     }
 }
 
-void printEquation(double a, double b, double c) {
+void printEquation(const double a, const double b, const double c) {
     printf("Your equation is %lgx^2 ", a);
     if (b < 0) {
         printf("- %lgx ", -b);
@@ -45,11 +45,11 @@ void printEquation(double a, double b, double c) {
     }
 }
 
-bool isEqualDouble(double lhs, double rhs) {
+bool isEqualDouble(const double lhs, const double rhs) {
     return abs(lhs - rhs) < EPSILON;
 }
 
-NRoots solveQuadratic(double a, double b, double c,
+NRoots solveQuadratic(const double a, const double b, const double c,
                       double *x1, double *x2) {
 
     assert(isfinite(a));
@@ -100,6 +100,6 @@ NRoots solveQuadratic(double a, double b, double c,
     }
 }
 
-double solveLinear(double a, double b) {
+double solveLinear(const double a, const double b) {
     return -b / a;
 }

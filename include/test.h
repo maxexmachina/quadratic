@@ -21,7 +21,7 @@ typedef struct testCase {
 //!
 //! @return 1 if test is successful, 0 otherwise
 //------------------------------------------------------------ 
-int checkTestCase(testCase test);
+int checkTestCase(const testCase test);
 
 //------------------------------------------------------------ 
 //! Parses test cases from a file and runs them with checkTestCase
