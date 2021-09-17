@@ -40,7 +40,7 @@ int checkTestCase(const testCase test) {
 }
 
 int runTests(const char* path) {
-    testCase test;
+    testCase test = {};
     size_t nTests = 0;
     size_t nFailed = 0;
 
@@ -50,6 +50,7 @@ int runTests(const char* path) {
         printf("Failed to open test file %s\n", path);
         return 0;
     }
+
     while (fscanf(testFile, "%zu %lg %lg %lg %zu %lg %lg\n", &test.id, &test.a,
            &test.b, &test.c, &test.nRoots, &test.x1, &test.x2) != EOF) {
         ++nTests;

@@ -6,9 +6,15 @@
 
 int getCoefsFromInput(double *a, double *b, double *c) {
     const int ret = scanf("%lg %lg %lg", a, b, c); 
-    if (ret == EOF || ret == 0) {
+    if (ret == EOF) {
+        printf("scanf function returned EOF\n");
         return 0;
-    }
+    } 
+    if (ret != 3) {
+        printf("Not enough valid coefficients\n");
+        return 0;
+    } 
+    
     return (isfinite(*a) && isfinite(*b) && isfinite(*c)) ? 1 : 0;
 }
 

@@ -4,7 +4,7 @@
 #include "quadratic.h"
 #include "test.h"
 
-#define NDEBUG_MODE
+//#define NDEBUG_MODE
 
 int main() {
 #ifndef NDEBUG_MODE 
